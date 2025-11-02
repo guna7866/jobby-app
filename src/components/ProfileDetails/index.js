@@ -13,12 +13,12 @@ const apiStatusConstants = {
 const ProfileDetails = props => {
   const renderProfile = () => {
     const {profileDetails} = props
-    const {profileImageUrl, shortBio} = profileDetails
+    const {name, profileImageUrl, shortBio} = profileDetails
 
     return (
       <div className="profile-details-container">
         <img src={profileImageUrl} alt="profile" className="profile-image" />
-        <h1 className="profile-name">Mr Gunalan</h1>
+        <h1 className="profile-name">{name}</h1>
         <p className="profile-bio">{shortBio}</p>
       </div>
     )

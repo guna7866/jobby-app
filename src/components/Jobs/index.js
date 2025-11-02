@@ -5,7 +5,7 @@ import Loader from 'react-loader-spinner'
 
 import Header from '../Header'
 import ProfileDetails from '../ProfileDetails'
-import Filters from '../Filters'
+import FiltersGroup from '../FiltersGroup'
 import JobCard from '../JobCard'
 
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
@@ -54,11 +54,9 @@ class Jobs extends Component {
   getJobs = async () => {
     this.setState({jobsApiStatus: apiStatusConstants.inProgress})
 
-    const {
-      activeSalaryRangeId,
-      employmentTypesChecked,
-      searchInput,
-    } = this.state
+    const {activeSalaryRangeId, employmentTypesChecked, searchInput} =
+      this.state
+
     const employTypes = employmentTypesChecked.join(',')
     const jwtToken = Cookies.get('jwt_token')
     const apiUrl = `https://apis.ccbp.in/jobs?employment_type=${employTypes}&minimum_package=${activeSalaryRangeId}&search=${searchInput}`
@@ -133,6 +131,7 @@ class Jobs extends Component {
           onChange={e => this.setState({searchInput: e.target.value})}
         />
         <button
+          aria-label="Save"
           className="search-button"
           type="button"
           data-testid="searchButton"
@@ -160,7 +159,7 @@ class Jobs extends Component {
           getProfileDetails={this.getProfileDetails}
         />
         <hr className="separator" />
-        <Filters
+        <FiltersGroup
           updateSalaryRangeId={this.updateSalaryRangeId}
           activeSalaryRangeId={activeSalaryRangeId}
           updateEmploymentTypesChecked={this.updateEmploymentTypesChecked}

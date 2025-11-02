@@ -1,111 +1,120 @@
 .navbar {
+  padding-top: 16px;
+  padding-bottom: 16px;
   background-color: #272727;
-  padding-top: 15px;
-  padding-bottom: 15px;
 }
+
 .nav-container {
-  width: 90%;
+  width: 91%;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
 
-  /* border: 1px solid white; */
-}
 .home-website-logo {
-  width: 110px;
+  width: 115px;
 }
+
 .nav-items {
-  padding-left: 0;
-  list-style-type: none;
   display: flex;
   align-items: center;
-  gap: 25px;
-
-  /* border: 1px solid white; */
+  list-style-type: none;
+  padding-left: 0;
+  gap: 26px;
 }
+
 .nav-link-lg {
+  font-family: 'Roboto';
+  font-size: 17px;
+  font-weight: 550;
   text-decoration: none;
   color: #ffffff;
-  font-family: 'Roboto';
-  font-size: 18px;
-  font-weight: 500;
 }
+
 .nav-link-sm {
   text-decoration: none;
   color: #ffffff;
 }
 
 .small-header-icons {
-  width: 26px;
-  height: 26px;
+  width: 25px;
+  height: 25px;
   color: #ffffff;
-  margin-left: 15px;
+  margin-left: 16px;
 }
 
 .logout-button-lg {
+  font-family: 'Roboto';
+  font-size: 15px;
+  font-weight: 550;
+  cursor: pointer;
+  outline: none;
   background-color: #6366f1;
   border: none;
   border-radius: 3px;
-  padding: 4px 22px;
+  padding: 3px 21px;
   color: #f8fafc;
-  font-family: 'Roboto';
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  outline: none;
 }
+
 .logout-button-sm {
-  margin-left: 5px;
   background-color: transparent;
   border: none;
   cursor: pointer;
   outline: none;
+  margin-left: 5px;
 }
+
 .logout-icon-sm {
-  width: 26px;
-  height: 26px;
+  width: 25px;
+  height: 25px;
   color: #ffffff;
 }
+
 @media screen and (max-width: 768px) {
   .nav-items {
     margin-left: auto;
   }
+
   .nav-link-lg {
     display: none;
   }
+
   .logout-button-lg {
     display: none;
   }
 }
+
 @media screen and (min-width: 768px) {
   .navbar {
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 26px;
+    padding-bottom: 26px;
   }
+
   .home-website-logo {
-    width: 130px;
+    width: 132px;
   }
+
   .nav-items {
-    gap: 30px;
+    gap: 31px;
   }
+
   .small-header-icons {
     display: none;
   }
+
   .logout-button-lg {
-    font-size: 16px;
-    padding: 6px 24px;
+    font-size: 15px;
+    padding: 5px 23px;
   }
+
   .logout-btn-list-item-small {
     display: none;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .home-website-logo {
-    width: 150px;
+    width: 155px;
   }
-}
-
-* {
-  /* border: 1px solid white; */
 }

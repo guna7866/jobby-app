@@ -41,6 +41,7 @@ const Header = props => {
           </li>
           <li className="logout-btn-list-item-small">
             <button
+              aria-label="Save"
               type="button"
               className="logout-button-sm"
               onClick={onClickLogout}
